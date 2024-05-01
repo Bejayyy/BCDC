@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Enrollment Form</title>
+    <link rel="stylesheet" href="enrollnowpage.css">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-19df9c0c-bd50-4901-b9a1-6192d1820588" data-elfsight-app-lazy></div>
+</head>
+<body>
+    <div class="back-button">
+        <a href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    </div>
+
+
+
+    <div class ="mainbg">
+        <div class="container">
+        <div class = "picture">
+            <img src="public/enroll-pic.jpeg">
+            
+        </div>
+        
+           
+            
+            <div class="form-container">
+                <div class="title">
+                    ENROLLMENT FORM
+                </div>
+                <div class="semititle">
+                    Part A. Information about the child
+                </div>
+                <div class="line-container">
+                    <hr class="line">
+                    <hr class="line2">
+                   
+
+                </div>
+
+                <form> 
+                    <div class="requirements">
+                        <ul>
+                            <li>
+                                REQUIREMENTS <i class="fa-solid fa-angle-down"></i>
+                                <ul>
+                                    <h4>Must be Submitted during First day of the Class</h4>
+                                    <li>
+                                        PSA or NSO
+                                    </li>
+                                    <li>
+                                       Immunization Card 
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="user-details">
+                        <div class="input-container">
+                                <label for="name">
+                                    Name:
+                                </label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text"placeholder="Enter Child's Name" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="name">
+                                Address:
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text"placeholder="Enter Child's Address" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="name">
+                                Age:
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text"placeholder="Enter Child's Age" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="name">
+                                Gender:
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text"placeholder="Enter Child's Gender" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="name">
+                                Birthdate:
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <input type="date" placeholder="Enter Child's Birthdate" required>
+                        </div>
+                </div>
+                <div class="button" id="submit">
+                    <input type="button" onclick="location.href='2ndpage.html'" value="Next">
+                </div>
+            </form>
+            <div class="notification" id="notification">
+                <div class="requirements1">
+    
+                            <h2>REQUIREMENTS</h1>
+                            <ul>
+                                <h2>Must be Submitted during First day of the Class</h2>
+                                <li>
+                                     PSA or NSO
+                                </li>
+                                <li>
+                                   Immunization Card 
+                                </li>
+                            </ul>
+                       
+                </div>
+                <button onclick="minimizeNotification()">OK</button>
+            </div>
+        </div>
+     
+        </div>
+        
+</div>
+<script>
+    // Function to check if all required inputs are filled
+    function checkInputs() {
+        // Get all input elements
+        var inputs = document.querySelectorAll('input[required]');
+        var filled = true;
+
+        // Check if any required input is empty
+        inputs.forEach(function(input) {
+            if (input.value.trim() === '') {
+                filled = false;
+            }
+        });
+
+        return filled;
+    }
+
+    // Function to handle form submission
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        // Check if all required inputs are filled
+        var allFilled = checkInputs();
+
+        // If all inputs are filled, show success message and redirect
+        if (!allFilled) {
+          
+            // If any required input is empty, alert the user
+            alert("Please fill out all required fields before submitting.");
+            window.location.href = "enrollnowpage.html"; 
+
+        }
+    }
+
+
+    function minimizeNotification() {
+        document.getElementById('notification').style.display = 'none';
+    }
+
+    // Add event listener for form submission
+    document.getElementById('submit').addEventListener('click', handleSubmit);
+
+    // Show the notification after the page is loaded (optional)
+    window.addEventListener('load', function() {
+        document.getElementById('notification').style.display = 'block';
+    });
+
+   
+</script>
+</body>
+</html>

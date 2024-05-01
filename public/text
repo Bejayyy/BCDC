@@ -1,0 +1,17 @@
+.title h1{
+    letter-spacing: 10px;
+    font-size: 10vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(
+        to right,rgba(0,168,253),#fff 35%,#e00a95);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding text shadow */
+}
+@keyframes gradient{
+    0%{background-position: 0% 100%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 70%;}
+}

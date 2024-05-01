@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@font-face {
+    font-family: 'Poetsen One';
+    src: url('PoetsenOne-Regular.otf') format('opentype');
+}
+
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: myFont;
+    src: url(font.ttf.ttf);
+}
+
+.mainbg{
+    background-image: url("public/Rectangle\ 14.png");
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    position: fixed;
+    width: 2000vh;
+    max-width: 100%;
+    place-items: center;
+   
+    
+}
+
+.container{
+    max-width: 1300px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    
+    
+}
+.title{   
+    text-align: center;
+    padding: 25px;
+    font-size: 25px;
+    width: 100%;
+    font-family: myFont;
+}
+
+.form-container .semititle{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: myFont;
+}
+.line{
+    border: 0 none;
+    height: 7px;
+    width: 30%;
+    background: #79C0D0;
+    border-radius: 5px;
+    margin-left: 40px;
+}
+.line-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 50px;
+}
+
+.line2 { 
+    border: 0 none;
+    background: gray; 
+    height: 7px;
+    width: 30%;
+    border-radius: 5px;
+}
+.input-container{
+    margin-bottom: 8px;
+    font-family: myFont;
+}
+
+form .user-details{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px;
+    font-size: 20px;
+    width: 100%;
+    max-height: 300px;
+}
+.user-details::-webkit-scrollbar{
+    width: 5px;
+
+}
+.user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%
+
+}
+.input-box .details{
+    position: absolute;
+    left: 0;
+    padding: 10px 0px 0px 40px;
+    pointer-events: none;
+    font-size: 1em;
+    color: gray;
+    transition: 0.5s;
+}
+
+form .button{
+    height: 45px;
+    margin: 50px 0;
+}
+
+.button{
+    text-align: center;
+    position:absolute;
+   
+    width: calc(100% - 80px);
+}
+.button input{
+    position: absolute;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+form .button input{
+    background-color: #79C0D0;
+    border: 2px solid #064857;
+    font-size: 20px;
+    color:white;
+    border-radius: 5px;
+    font-family: myFont;
+}
+.input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    }
+
+@media only screen and (min-width:1000px){
+    .back-button{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 10px;
+        width: 60px;
+        height: auto;
+        border-radius: 50px;
+        text-align: center;
+    }
+    .back-button i{
+        font-size: 35px;
+        color: black;
+    }
+    .back-button:hover{
+        background-color: rgba(128, 128, 128, 0.267);
+    }
+
+    .mainbg{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+    }
+   .picture img {
+        position: absolute;
+        width: 42%; 
+        height: 100%; 
+        max-width: 100%; 
+        max-height: 100%; 
+        border-radius: 10px 0 0 10px; 
+        display: block;
+        object-fit: cover;
+    }
+    .container{
+        max-width: 1300px;
+        width: 100vw;
+        height: 90vh;
+        background-color: white;
+        border-radius: 10px;
+        position: absolute;
+        
+        
+       
+    }
+
+   
+    .form-container{
+        position: absolute;
+       
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 50vw;
+        height: 90vh;
+        right: 0;
+        
+        
+    }
+    .form-container .title{   
+       
+        place-items: end;
+        position: absolute; 
+        font-size: 30px;
+        width: 94.5%;
+        font-family: myFont;
+      
+    }
+
+    .semititle{   
+        font-size: 25px;
+        margin-top: 60px;
+        width: 100%;
+    }
+    .line{
+        border: 0 none;
+        height: 10px;
+        width: 40%;
+        background: #79C0D0;
+        border-radius: 5px;
+        margin-right: 50px;
+    }
+    .line-container {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: 80px;
+        
+    }
+    
+    .line2 { 
+        background: gray; 
+        height: 10px;
+        width: 40%;
+        border-radius: 5px;
+    }
+
+
+    .input-box .details{
+        left: 0;
+        padding: 10px 0px 0px 70px;
+        pointer-events: none;
+        font-size: 1em;
+        transition: 0.5s;
+    }
+
+    .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 40px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    }
+
+
+.button{
+    position:absolute;
+    bottom: -25px;
+    width: 46vw;
+   
+    
+    display: grid;
+    place-items: end;
+    transition: 3s;
+
+}
+.button input:hover{
+    transform: scale(1.1);
+    
+}
+form .button input{
+    background-color: #79C0D0;
+    border: 2px solid #064857;
+    font-size: 20px;
+    color:white;
+    border-radius: 5px;
+    font-family: myFont;
+    width: 10vw;
+}
+.input-container{
+    margin-bottom: 8px;
+    font-family: myFont;
+
+}
+
+.notification h1{
+    font-family: 'Poetsen One';
+    text-align: center;
+}
+.notification li{
+  font-size: 18px;
+    margin-top: 20px;
+    font-family: cursive;
+    margin-left: 20px;
+}
+
+.requirements{
+    position: absolute;
+    
+    width: 300px;
+    margin-top: 20px;
+    right: -20px;
+    text-align: center;
+}
+.requirements ul li{
+    font-family: 'Poetsen One';
+    letter-spacing: 2px;
+    list-style: none;
+    
+}
+.requirements ul:hover{
+cursor: pointer;
+}
+
+.requirements ul  li ul {
+    position: absolute;
+    
+   
+}
+.requirements ul li ul li{
+    list-style: circle;
+    text-align: start;
+    margin-left: 3vw;
+}
+
+
+.requirements ul  li ul{
+    display: none;
+    list-style: disc;
+    border:2px solid  #3ab1b7;
+    background-color: #f1b7c1;
+    text-align: center;
+    position: absolute;
+    padding: 20px;
+    
+    width: 300px;
+    
+}
+
+.requirements ul  li ul li{
+    margin-top: 20px;
+font-family: cursive;
+}
+.requirements ul li:hover ul{
+    display: block;
+    display: grid;
+    
+}
+.notification {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 999;
+    width: 500px;
+    height: 300px;
+}
+.notification .requirements1{
+    display: grid;
+    place-items: center;
+}
+.requirements1 ul h2 {
+    margin-top: 20px;
+    font-family: 'Poetsen One';
+    font-size: 30px;
+    text-align: center;
+    
+ 
+
+}
+.requirements1 ul li{
+    margin-left: 10vw;
+    font-size: 20px;
+}
+.notification button{
+    padding: 5px;
+    margin-left: 410px;
+    margin-top: 35px;
+    background-color: #79C0D0;
+    border: 2px solid #064857;
+    border-radius: 10px;
+    width: 70px;
+    color:white;
+    border-radius: 5px;
+    font-family: myFont;
+   
+    
+}
+.notification button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+}
+
+
+
+
+
